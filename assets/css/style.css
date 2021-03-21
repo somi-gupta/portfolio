@@ -1,0 +1,228 @@
+:root {
+  --heading: powderblue;
+}
+
+* {
+  /* This property allows us to include the padding and border in an element's total width and height. */
+  box-sizing: border-box;
+  /* This property is used to generate space around an element's content, inside of any defined borders. */
+  padding: 0;
+  /* This property is used to create space around element, outside of any borders */
+  margin: 0;
+  /* This property property sets the type of a font */
+  font-family: sans-serif;
+}
+
+body {
+  /* sets the background color of the page */
+  background-color: lightslategrey;
+}
+
+.header {
+  padding: 20px;
+  /* This property specifies the font for an element */
+  background-color: gray;
+  /* This property specifies the color of text. */
+  color: var(--heading);
+}
+
+.header h1 {
+  /* display: inline-block allows to set a width and height on the element respecting top and bottom margins/paddings. */
+  display: inline-block;
+  /* This property property sets the size of a font */
+  font-size: 48px;
+}
+
+.header nav {
+  padding-top: 15px;
+  /* This property sets the right margin of an element */
+  margin-right: 20px;
+  /* This property defines how an element should float */
+  float: right;
+  font-size: 20px;
+}
+
+header nav ul {
+  /* This property sets list style to none */
+  list-style-type: none;
+}
+
+header nav ul li {
+  /* This property sets the display as inline in a block */
+  display: inline-block;
+  /* This property sets the left margin of an element */
+  margin-left: 25px;
+}
+
+a {
+  /* This property sets the position of an element */
+  position: relative;
+  color: var(--heading);
+}
+
+.sideheader {
+  font-size: 40px;
+  color: var(--heading);
+  /* This property sets the border style */
+  border-right-style: solid;
+  border-right-width: thick;
+  /* This property sets the padding to an element*/
+  padding: 1rem;
+  /* This property sets the width of an element*/
+  width: 20%;
+  /* This property not allow floating elements on the left or the right side of a specified element */
+  clear: both;
+  /* This property places an element to its left of the container */
+  float: left;
+  /* This propperty sets the top marging of an element */
+  margin-top: 1rem;
+}
+
+.alignright {
+  float: left;
+}
+
+.hero {
+  /* This property sets the height of an element. */
+  height: 35vh;
+  /* This property sets the width of an element. */
+  width: 100%;
+  /* This property sets the bottom margin of an element */
+  margin-bottom: 25px;
+  /* This property sets the background as color gradient */
+  background: linear-gradient(lightblue, white);
+  /* This property specifies the size of the background images. */
+  background-size: cover;
+  margin: 0%;
+}
+
+#avatar {
+  /* This property sets the border radius */
+  border-radius: 1px;
+  height: 20hv;
+}
+
+.imgResponsive {
+  width: 15%;
+  /* max-width: 200px; */
+  height: auto;
+  position: relative;
+}
+
+/* Bottom right text */
+
+.bottom-right {
+  display: inline-block;
+  /* This property sets the position relative to nearest native ancestor*/
+  position: absolute;
+  /* This property sets the horizontal position of the  positioned element */
+  right: 16px;
+  /* This property sets the vertical position of the  positioned element */
+  top: 40%;
+  /* This property sets the coordinates space of the element */
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  /* This property defines the font weight */
+  font-weight: bold;
+  color: grey;
+}
+
+/* Container 80%, Sidebar 20% */
+.container {
+  border-width: 1px;
+  padding: 8px;
+  float: left;
+  width: 80%;
+}
+
+/* Set the image container to flex and wrap childs */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Image spacing between each other per row */
+.col {
+  flex-basis: 20%;
+  margin: 10px 10px;
+}
+
+/* Same image sizes */
+.imgDiv img {
+  height: 200px;
+  width: 300px;
+  border: 1px solid #ccc;
+}
+
+/* Hover over an image to zoom */
+.imgDiv:hover {
+  /* (200% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.5);
+  /* This property specifies the stack order of an element. */
+  z-index: 2;
+}
+
+/* <p> element size */
+.container p {
+  float: left;
+  padding-left: 1rem;
+  width: 75%;
+  margin-top: 1rem;
+}
+
+/* Set the text on an image */
+.text-box {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: burlywood;
+}
+
+/* Set the contact-me list style */
+.contact {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 80%;
+}
+
+/* Set the list as inline */
+.contact li {
+  display: inline-block;
+  padding: 16px;
+}
+
+/* Set the <a> tag color, text-align and display */
+.contact li a {
+  display: block;
+  color: black;
+  text-align: center;
+}
+
+li a:hover {
+  background-color: gray;
+}
+
+header nav ul li {
+  display: inline-block;
+  /* This property sets the left margin of an element */
+  margin-left: 25px;
+}
+
+/* Width is set to 50% at 992px or smaller */
+@media screen and (max-width: 992px) {
+  .container{
+    width: 50%;
+  }
+}
+
+/* Width is set to 100%  at 768px or smaller */
+@media screen and (max-width: 768px) {
+  .container{
+    width: 100%;
+  }
+}
+
+
